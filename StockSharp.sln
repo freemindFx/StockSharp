@@ -72,6 +72,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10 - Base", "10 - Base", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00_fxBase", "00 - Tony\10Base\00_fxBase\00_fxBase.csproj", "{89D8495D-A718-4445-80B2-99C6FF97218B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00_fxConfiguration", "00 - Tony\10Base\00_fxConfiguration\00_fxConfiguration.csproj", "{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -298,6 +300,14 @@ Global
 		{89D8495D-A718-4445-80B2-99C6FF97218B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{89D8495D-A718-4445-80B2-99C6FF97218B}.Release|x64.ActiveCfg = Release|x64
 		{89D8495D-A718-4445-80B2-99C6FF97218B}.Release|x64.Build.0 = Release|x64
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Debug|x64.ActiveCfg = Debug|x64
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Debug|x64.Build.0 = Debug|x64
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Release|x64.ActiveCfg = Release|x64
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -324,6 +334,7 @@ Global
 		{11FDEA93-3E5D-4448-85C1-5EA355454081} = {95016DD0-E34D-4006-9EBF-7048C5F35E04}
 		{908A9E29-FD75-4819-9FE8-01AE2A828EB6} = {D59EF148-00A3-4CC9-A825-0A600ACF77D3}
 		{89D8495D-A718-4445-80B2-99C6FF97218B} = {908A9E29-FD75-4819-9FE8-01AE2A828EB6}
+		{C0C2BAB6-613A-40C2-93D4-EFB1256BE4F3} = {908A9E29-FD75-4819-9FE8-01AE2A828EB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05C6C3D9-0063-47AB-BC11-315B396BEBD0}
