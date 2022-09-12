@@ -1,0 +1,2 @@
+﻿$nukpgName=$args[0]
+Get-ChildItem -Path . -Recurse -Filter *$nukpgName.nupkg |ForEach-Object {  Write-Host "About to push a package named '$($_.Name)'..."   dotnet nuget push -s http://localhost:5000/v3/index.json --skip-duplicate -k QqGg20061203 $_.FullName   }
