@@ -27,6 +27,10 @@ namespace StockSharp.Algo.Candles
 	using StockSharp.Messages;
 	using StockSharp.Localization;
 
+	// ----------------------------------------------------- Tony ------------------------------------------------------------	
+	using fx.Base;
+	// ----------------------------------------------------- Tony ------------------------------------------------------------
+
 	/// <summary>
 	/// Base candle class (contains main parameters).
 	/// </summary>
@@ -299,6 +303,26 @@ namespace StockSharp.Algo.Candles
 
 			return destination;
 		}
+
+		// ----------------------------------------------------- Tony ------------------------------------------------------------
+		private fxBatchStatus _batchStatus;
+		/// <summary>
+		/// Batch Status
+		/// </summary>
+		[DataMember]
+		[CLSCompliant( false )]
+		public fxBatchStatus BatchStatus
+		{
+			get
+			{
+				return _batchStatus;
+			}
+			set
+			{
+				_batchStatus = value;
+			}
+		}
+		// ----------------------------------------------------- Tony ------------------------------------------------------------
 	}
 
 	/// <summary>

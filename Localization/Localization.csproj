@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\common_target_standard.props" />
+    <Import Project="..\Diectory.Build.props" />
   <PropertyGroup>
     <ProjectGuid>{A98A81CE-75A1-4FAB-9C02-E6EEF4B51F4F}</ProjectGuid>
   </PropertyGroup>
@@ -20,4 +21,18 @@
   <ItemGroup>
     <ProjectReference Include="..\Localization.Generator\Localization.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Localization</RootNamespace>
+        <AssemblyName>StockSharp.Localization</AssemblyName>
+        <PackageId>StockSharp.Localization</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
+
+    
 </Project>

@@ -1,14 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\common_target_standard.props" />
-  <PropertyGroup>
-    <ProjectGuid>{2A5C6FAD-106C-4A4A-B602-77A6B1034CA2}</ProjectGuid>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Ecng.Interop" Version="$(EcngVer)" />
-    <PackageReference Include="Ecng.Net" Version="$(EcngVer)" />
-    <PackageReference Include="Ecng.IO" Version="$(EcngVer)" />
-    <PackageReference Include="Ecng.StringSearch" Version="$(EcngVer)" />
-    <PackageReference Include="Ecng.Compilation" Version="$(EcngVer)" />
+ <Import Project="..\common_target_standard.props" />
+    <Import Project="..\Diectory.Build.props" />
+    <PropertyGroup>
+        <ProjectGuid>{2A5C6FAD-106C-4A4A-B602-77A6B1034CA2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Ecng.Interop" Version="$(EcngVer)" />
+        <PackageReference Include="Ecng.Net" Version="$(EcngVer)" />
+        <PackageReference Include="Ecng.IO" Version="$(EcngVer)" />
+        <PackageReference Include="Ecng.StringSearch" Version="$(EcngVer)" />
+        <PackageReference Include="Ecng.Compilation" Version="$(EcngVer)" />
+        <PackageReference Include="fx.Base" Version="5.0.205" />
 
     <PackageReference Include="MathNet.Numerics" Version="$(MathNumVer)" />
     <PackageReference Include="Microsoft.CSharp" Version="$(CSharpVer)" />
@@ -17,4 +19,18 @@
     <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj" />
     <ProjectReference Include="..\Configuration\Configuration.csproj" />
   </ItemGroup>
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Algo</RootNamespace>
+        <AssemblyName>StockSharp.Algo</AssemblyName>
+        <PackageId>StockSharp.Algo</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
+
+    
 </Project>

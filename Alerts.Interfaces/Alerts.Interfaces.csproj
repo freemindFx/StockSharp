@@ -1,7 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\common_target_standard.props" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<Import Project="..\common_target_standard.props" /> 
+    <ItemGroup>
+        <ProjectReference Include="..\Algo\Algo.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Algo\Algo.csproj" />
-  </ItemGroup>
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Alerts.Interfaces</RootNamespace>
+        <AssemblyName>StockSharp.Alerts.Interfaces</AssemblyName>
+        <PackageId>StockSharp.Alerts.Interfaces</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
 </Project>

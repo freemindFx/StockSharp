@@ -36,6 +36,11 @@ namespace StockSharp.Algo.Storages
 	using StockSharp.Logging;
 	using StockSharp.Messages;
 
+	// ----------------------------------------------------------- Tony ----------------------------------------------------------------------------
+	using fx.Base;
+	// ----------------------------------------------------------- Tony --------------------------------------------------------------------------------
+
+
 	/// <summary>
 	/// Extension class for storage.
 	/// </summary>
@@ -1432,12 +1437,39 @@ namespace StockSharp.Algo.Storages
 
 			var replySent = false;
 
+			/* -------------------------------------------------------------------------------------------------------------------------------------------
+            * 
+            *  Tony 05 : After loading of candles, we will add that this is a batch candle, so we don't process one bar by a time
+            * 
+            * ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+			var count = messages.Count();
+
+			int msgIndex = 0;
+
 			foreach (var message in messages)
 			{
 				if (!replySent)
 				{
 					sendReply();
 					replySent = true;
+				}
+
+				/* -------------------------------------------------------------------------------------------------------------------------------------------
+                 * 
+                 *  Tony 05 : Add BatchStatus to the Message so we don't have to do technical analysis per bar.
+                 * 
+                 * ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+				if (message is TimeFrameCandleMessage tf)
+				{
+					tf.BatchStatus = fxBatchStatus.Batching;
+
+					if (msgIndex == count - 1)
+					{
+						tf.BatchStatus = fxBatchStatus.EndBatch;
+					}
 				}
 
 				message.OriginalTransactionId = transactionId;

@@ -70,6 +70,8 @@ namespace StockSharp.Configuration
 			"StockSharp.Studio.Controls",
 			"StockSharp.QuikLua",
 			"StockSharp.QuikLua32",
+			// Tony Fix : Here we also want to ignore the AlgoEx
+			"StockSharp.AlgoEx"
 		};
 		
 		/// <summary>
@@ -95,12 +97,16 @@ namespace StockSharp.Configuration
 
 					try
 					{
-						var asm = Assembly.Load(AssemblyName.GetAssemblyName(assembly));
+						// Tony FIX: Instead of loading from name, we directly load from the assembly path
 
-						adapters.AddRange(asm
+						var asm = Assembly.LoadFrom( assembly );
+
+						var found = asm
 							.GetTypes()
-							.Where(t => typeof(IMessageAdapter).IsAssignableFrom(t) && t.IsPublic && !t.IsAbstract && !t.IsObsolete() && t.IsBrowsable() && !t.Name.EndsWith("Dialect"))
-							.ToArray());
+							.Where( t => typeof( IMessageAdapter ).IsAssignableFrom( t ) && t.IsPublic && !t.IsAbstract && !t.IsObsolete() && t.IsBrowsable() && !t.Name.EndsWith( "Dialect" ) )
+							.ToArray();
+
+						adapters.AddRange( found );
 					}
 					catch (Exception e)
 					{

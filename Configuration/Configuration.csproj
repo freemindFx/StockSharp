@@ -1,12 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\common_target_standard.props" />
-  <PropertyGroup>
-    <ProjectGuid>{2CFF1903-4EF5-46F8-AB5D-BB623CA75CE6}</ProjectGuid>
-  </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Messages\Messages.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NuGet.Configuration" Version="$(NuGetApiVer)" />
-  </ItemGroup>
+    <Import Project="..\common_target_standard.props" />
+    <Import Project="..\Diectory.Build.props" />
+    <PropertyGroup>
+        <ProjectGuid>{2CFF1903-4EF5-46F8-AB5D-BB623CA75CE6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Messages\Messages.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="NuGet.Configuration" Version="$(NuGetApiVer)" />
+    </ItemGroup>
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Configuration</RootNamespace>
+        <AssemblyName>StockSharp.Configuration</AssemblyName>
+        <PackageId>StockSharp.Configuration</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
 </Project>

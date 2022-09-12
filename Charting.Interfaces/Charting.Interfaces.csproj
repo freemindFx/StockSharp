@@ -1,11 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\common_target_standard.props" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\common_target_standard.props" />
+    <Import Project="..\Diectory.Build.props" />
+    <ItemGroup>
+        <PackageReference Include="Ecng.Drawing" Version="$(EcngVer)" />
+    </ItemGroup>
 	
-  <ItemGroup>
-    <PackageReference Include="Ecng.Drawing" Version="$(EcngVer)" />
-  </ItemGroup>
-	
-  <ItemGroup>
-    <ProjectReference Include="..\Algo\Algo.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Algo\Algo.csproj" />
+        <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Charting.Interfaces</RootNamespace>
+        <AssemblyName>StockSharp.Charting.Interfaces</AssemblyName>
+        <PackageId>StockSharp.Charting.Interfaces</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
 </Project>

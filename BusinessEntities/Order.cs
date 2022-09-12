@@ -161,7 +161,7 @@ namespace StockSharp.BusinessEntities
 
 		private string _boardId;
 
-		/// <summary>
+        /// <summary>
 		/// Board order id. Uses in case of <see cref="Order.Id"/> and <see cref="Order.StringId"/> is a brokerage system ids.
 		/// </summary>
 		[DataMember]
@@ -680,5 +680,15 @@ namespace StockSharp.BusinessEntities
 
 			return str;
 		}
+		/* -------------------------------------------------------------------------------------------------------------------------------------------
+		* 
+		*  Tony 00: What type of Position to Close 
+		* 
+		* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+		/// <summary>
+		/// What type of Position to Close
+		/// </summary>
+		public ClosePositionsType? ClosePositionType { get; set; }
 	}
 }

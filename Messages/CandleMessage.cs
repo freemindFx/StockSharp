@@ -23,8 +23,8 @@ namespace StockSharp.Messages
 	using System.Xml.Serialization;
 
 	using Ecng.Common;
-
-	using StockSharp.Localization;
+    using fx.Base;
+    using StockSharp.Localization;
 
 	/// <summary>
 	/// Candle states.
@@ -323,6 +323,14 @@ namespace StockSharp.Messages
 			copy.BuildFrom = BuildFrom;
 			copy.SeqNum = SeqNum;
 
+			/* -------------------------------------------------------------------------------------------------------------------------------------------
+            * 
+            *  Tony 03: BatchStatus
+            * 
+            * ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+			copy.BatchStatus = BatchStatus;
+
 			return copy;
 		}
 
@@ -342,6 +350,19 @@ namespace StockSharp.Messages
 			get => OpenTime;
 			set => OpenTime = value;
 		}
+
+		// ----------------------------------------------------------- Tony --------------------------------------------------------------------------------
+		/// <summary>
+		/// State.
+		/// </summary>
+		[DataMember]
+		[CLSCompliant( false )]
+		public fxBatchStatus BatchStatus
+		{
+			get;
+			set;
+		}
+		// ----------------------------------------------------------- Tony --------------------------------------------------------------------------------
 	}
 
 	/// <summary>

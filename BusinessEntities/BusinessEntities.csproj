@@ -1,9 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\common_target_standard.props" />
-  <PropertyGroup>
-    <ProjectGuid>{DCE69DB8-53CA-4B7F-9368-02F175A31074}</ProjectGuid>
-  </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Messages\Messages.csproj" />
-  </ItemGroup>
+<Import Project="..\common_target_standard.props" />
+    <Import Project="..\Diectory.Build.props" />
+    <PropertyGroup>
+        <ProjectGuid>{DCE69DB8-53CA-4B7F-9368-02F175A31074}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Messages\Messages.csproj" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.BusinessEntities</RootNamespace>
+        <AssemblyName>StockSharp.BusinessEntities</AssemblyName>
+        <PackageId>StockSharp.BusinessEntities</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+      <NoWarn>1701;1702;MSB3270</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+      <NoWarn>1701;1702;MSB3270</NoWarn>
+    </PropertyGroup>
 </Project>

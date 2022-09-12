@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\common_target_standard.props" />
+    <Import Project="..\Diectory.Build.props" />
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <IsRoslynComponent>true</IsRoslynComponent>
@@ -26,4 +27,16 @@
       <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll" IncludeRuntimeDependency="false" />
     </ItemGroup>
   </Target>
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Localization.Generator</RootNamespace>
+        <AssemblyName>StockSharp.Localization.Generator</AssemblyName>
+        <PackageId>StockSharp.Localization.Generator</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
 </Project>

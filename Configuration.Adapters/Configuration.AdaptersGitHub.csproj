@@ -1,9 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\common_target_net.props" />
-  <PropertyGroup>
-    <ProjectGuid>{7D6C7AD7-2735-4BC0-8E37-B21584E43264}</ProjectGuid>
-    <RootNamespace>StockSharp.Configuration</RootNamespace>
-  </PropertyGroup>
+    <Import Project="..\common_target_net.props" />
+    <Import Project="..\Diectory.Build.props" />
+    <PropertyGroup>
+        <ProjectGuid>{7D6C7AD7-2735-4BC0-8E37-B21584E43264}</ProjectGuid>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Configuration</RootNamespace>
+        <AssemblyName>StockSharp.Configuration.Adapters</AssemblyName>
+        <PackageId>StockSharp.Configuration.Adapters</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <StockSharpTargets>netstandard2.0;netstandard2.1</StockSharpTargets>
+    </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="StockSharp.FTXStub" Version="$(StockSharpVer)" />
     <PackageReference Include="StockSharp.AlfaDirect" Version="$(StockSharpVer)" />

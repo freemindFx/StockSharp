@@ -1226,6 +1226,13 @@ namespace StockSharp.Algo
 			candle.SeqNum = message.SeqNum;
 			candle.BuildFrom = message.BuildFrom;
 
+			/* -------------------------------------------------------------------------------------------------------------------------------------------
+			* 
+			*  Tony 04: Candle BatchStatus Copy 
+			* 
+			* ------------------------------------------------------------------------------------------------------------------------------------------- */
+			candle.BatchStatus = message.BatchStatus;
+
 			return candle;
 		}
 

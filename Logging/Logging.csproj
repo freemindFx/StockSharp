@@ -1,9 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="..\common_target_standard.props" />
-  <PropertyGroup>
-    <ProjectGuid>{C4476ADD-A3D5-41BB-9D43-55D865863B78}</ProjectGuid>
-  </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Localization\Localization.csproj" />
-  </ItemGroup>
+    <Import Project="..\common_target_standard.props" />
+    <Import Project="..\Diectory.Build.props" />
+    <PropertyGroup>
+        <ProjectGuid>{C4476ADD-A3D5-41BB-9D43-55D865863B78}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Localization\Localization.csproj" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Logging</RootNamespace>
+        <AssemblyName>StockSharp.Logging</AssemblyName>
+        <PackageId>StockSharp.Logging</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
 </Project>

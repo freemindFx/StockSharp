@@ -1,18 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
+<PropertyGroup>
     <StockSharpTargets>netstandard2.0;net6.0</StockSharpTargets>
   </PropertyGroup>
   <Import Project="..\common_target_standard.props" />
-  <PropertyGroup>
-    <ProjectGuid>{B47F9C23-A4BD-46A9-BF27-54CB3D653503}</ProjectGuid>
-  </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Logging\Logging.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <Import Project="..\Diectory.Build.props" />
+    <PropertyGroup>
+        <ProjectGuid>{B47F9C23-A4BD-46A9-BF27-54CB3D653503}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+	    <PackageReference Include="Ecng.Serialization" Version="$(EcngVer)" />
+	    <PackageReference Include="fx.Base" Version="5.0.205" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Logging\Logging.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <Compile Remove="AsyncMessageProcessor.cs" />
     <Compile Remove="IAsyncMessageAdapter.cs" />
   </ItemGroup>
 
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>StockSharp.Messages</RootNamespace>
+        <AssemblyName>StockSharp.Messages</AssemblyName>
+        <PackageId>StockSharp.Messages</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+    </PropertyGroup>
 </Project>
