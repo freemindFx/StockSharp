@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\..\..\Diectory.Build.props" />
+    <PropertyGroup>
+        <RootNamespace>fx.Base</RootNamespace>
+        <AssemblyName>fx.Base</AssemblyName>
+        <PackageId>fx.Base</PackageId>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ProjectGuid>{89D8495D-A718-4445-80B2-99C6FF97218B}</ProjectGuid>
+        <Platforms>AnyCPU;x64</Platforms>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Version>5.0.230</Version>
+        <Authors>TonyFreemind</Authors>
+        <Company>FreemindFx</Company>
+        <BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath>
+        <DebugType>portable</DebugType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
+    </ItemGroup>    
+</Project>
