@@ -36,6 +36,7 @@
 
     <PropertyGroup>
         <Version>5.0.230</Version>
+        <NoWarn>$(NoWarn);NU1803</NoWarn>
         <Authors>TonyFreemind</Authors>
         <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
     </PropertyGroup>

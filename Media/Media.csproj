@@ -24,6 +24,7 @@
         <RootNamespace>StockSharp.Media</RootNamespace>
         <AssemblyName>StockSharp.Media</AssemblyName>
         <PackageId>StockSharp.Media</PackageId>
+        <NoWarn>$(NoWarn);NU1803</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup>

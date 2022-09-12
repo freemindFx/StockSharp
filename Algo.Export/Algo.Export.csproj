@@ -2,6 +2,7 @@
   <Import Project="..\common_target_standard.props" />
   <PropertyGroup>
     <ProjectGuid>{D5A9DBB4-8732-412B-989E-ACFAAA275E4B}</ProjectGuid>
+      <NoWarn>$(NoWarn);NU1803</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Ecng.Data.Linq2db" Version="$(EcngVer)" />

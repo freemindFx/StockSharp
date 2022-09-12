@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
- <Import Project="..\common_target_standard.props" />
+    <Import Project="..\common_target_standard.props" />
     <Import Project="..\Diectory.Build.props" />
     <PropertyGroup>
         <ProjectGuid>{2A5C6FAD-106C-4A4A-B602-77A6B1034CA2}</ProjectGuid>
@@ -12,13 +12,13 @@
         <PackageReference Include="Ecng.Compilation" Version="$(EcngVer)" />
         <PackageReference Include="fx.Base" Version="5.0.205" />
 
-    <PackageReference Include="MathNet.Numerics" Version="$(MathNumVer)" />
-    <PackageReference Include="Microsoft.CSharp" Version="$(CSharpVer)" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj" />
-    <ProjectReference Include="..\Configuration\Configuration.csproj" />
-  </ItemGroup>
+        <PackageReference Include="MathNet.Numerics" Version="$(MathNumVer)" />
+        <PackageReference Include="Microsoft.CSharp" Version="$(CSharpVer)" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj" />
+        <ProjectReference Include="..\Configuration\Configuration.csproj" />
+    </ItemGroup>
     <PropertyGroup>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <RootNamespace>StockSharp.Algo</RootNamespace>
@@ -29,8 +29,12 @@
     <PropertyGroup>
         <Version>5.0.230</Version>
         <Authors>TonyFreemind</Authors>
-        <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+        <Company>FreemindFx</Company>
+        <BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath>
+        <DebugType>portable</DebugType>
+        <NoWarn>$(NoWarn);NU1803</NoWarn>
     </PropertyGroup>
 
     
+
 </Project>

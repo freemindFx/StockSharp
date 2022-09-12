@@ -21,5 +21,8 @@
         <Version>5.0.230</Version>
         <Authors>TonyFreemind</Authors>
         <Company>FreemindFx</Company><BaseOutputPath>T:\00-FreemindTraderExe</BaseOutputPath><DebugType>portable</DebugType>
+        <NoWarn>$(NoWarn);NU1803</NoWarn>
     </PropertyGroup>
+
+    
 </Project>
